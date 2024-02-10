@@ -9,7 +9,7 @@ export const Content: React.FC = () => {
       direction="column"
       style={{
         minHeight: "95vh",
-        width: "100vw",
+        width: "100%",
         margin: 0,
         boxShadow: "-1px 0px 0px 0px black, 1px 0px 0px 0px black",
         display: "flex",

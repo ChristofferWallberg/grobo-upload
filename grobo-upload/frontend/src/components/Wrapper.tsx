@@ -26,7 +26,6 @@ export const Wrapper: React.FC<WrapperProps> = ({ children }) => {
       direction="column"
       style={{
         minHeight: "100vh",
-        width: "100vw",
         margin: 0,
       }}
     >
