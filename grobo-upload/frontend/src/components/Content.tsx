@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Grid } from "@mui/material";
 import { Footer } from "./Footer";
+import { Upload } from "../utils/Upload";
 
 export const Content: React.FC = () => {
+  const [file, setFile] = useState(null);
+  const handleFileChange = (e) => {
+    // Uploaded file
+    const file = e.target.files[0];
+    // Changing file state
+    setFile(file);
+  };
   return (
     <Grid
       container
@@ -24,6 +32,7 @@ export const Content: React.FC = () => {
         <Typography variant="h4" align="center">
           Please login to upload an image or view the images
         </Typography>
+        <Upload handleFileChange={handleFileChange} />
       </Grid>
       <Grid item style={{ alignSelf: "flex-end" }}>
         <Footer />
